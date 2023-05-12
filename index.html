@@ -63,6 +63,36 @@
 				</div>
 			</div>
 		</nav>
+		<div class="container mb-5 pb-5">
+			<div class="row">
+				<div class="col">
+					<table id="opinions" class="table table-responsive">
+						<script>
+							$(document).ready(function () {
+								$("#opinions").DataTable({
+									// responsive: true,
+									ajax: { url: "39562616.json", dataSrc: "" },
+									columns: [
+										{ data: "opinion_id", title: "ID opinii" },
+										{ data: "author", title: "Autor" },
+										{ data: "content", title: "Treść" },
+										{ data: "stars", title: "Gwiazdki" },
+										{ data: "recommendation", title: "Rekomendacja" },
+										{ data: "pros", title: "Lista zalet" },
+										{ data: "cons", title: "lista wad" },
+										{ data: "useful_count", title: "Przydatna" },
+										{ data: "unuseful_count", title: "Nieprzydatna" },
+										{ data: "purchased", title: "Potwierdzona zakupem" },
+										{ data: "opinion_date", title: "Data wystawienia" },
+										{ data: "purchase_date", title: "Data zakupu" },
+									],
+								});
+							});
+						</script>
+					</table>
+				</div>
+			</div>
+		</div>
 		<main class="my-5">
 			<div class="container my-5">
 				<div class="row">
@@ -83,22 +113,6 @@
 				<div class="row">
 					<div class="col">
 						<table class="table table-striped table-hover" id="opinions">
-							<thead>
-								<tr>
-									<th>Id opinii</th>
-									<th>Autor</th>
-									<th>Rekomendacja</th>
-									<th>Liczba gwiazdek</th>
-									<th>Tresc</th>
-									<th>Lista zalet</th>
-									<th>Lista wad</th>
-									<th>Potwierdzono zakupem</th>
-									<th>Data wystawienia</th>
-									<th>Data zakupu</th>
-									<th>Przydatna</th>
-									<th>Nieprzydatna</th>
-								</tr>
-							</thead>
 							<tbody>
 								<script>
 									// FETCHING DATA FROM JSON FILE
@@ -153,13 +167,13 @@
 			</div>
 		</main>
 	</body>
-	<footer>
-		<script>
+	<!-- <footer> -->
+	<!-- <script>
 			$(document).ready(function () {
 				$("#opinions").DataTable({
 					responsive: true,
 				});
 			});
-		</script>
-	</footer>
+		</script> -->
+	<!-- </footer> -->
 </html>
